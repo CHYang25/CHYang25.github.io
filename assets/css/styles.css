@@ -29,7 +29,7 @@
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* Layout */
-  --measure: 760px;
+  --measure: 920px;
   --nav-h: 64px;
 }
 
@@ -182,23 +182,61 @@ main {
 }
 .prose p:last-child { margin-bottom: 0; }
 
+.prose h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 1.9em 0 0.7em;
+  color: var(--text);
+}
+.prose h2:first-child { margin-top: 0; }
+
+.prose blockquote {
+  margin: 1.4em 0;
+  padding: 4px 0 4px 24px;
+  border-left: 3px solid var(--accent);
+}
+.prose blockquote p {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: #33302b;
+  margin: 0 0 10px;
+}
+.prose blockquote cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
 /* ---------- Hero ---------- */
 .hero {
-  text-align: center;
-  padding: 72px 0 48px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 48px;
+  text-align: left;
+  padding: 80px 0 56px;
 }
+.hero__text { flex: 1 1 auto; min-width: 0; }
 
 .hero__photo {
   position: relative;
-  width: 132px;
-  height: 132px;
-  margin: 0 auto 28px;
+  flex: 0 0 auto;
+  width: 280px;
+  height: 280px;
 }
 .hero__photo img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 16px;
   object-fit: cover;
+  object-position: center 25%;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
 }
@@ -208,24 +246,25 @@ main {
   justify-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 16px;
   background: linear-gradient(150deg, #f3d7d0, #e8aea2);
   color: var(--accent-hover);
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 2.6rem;
+  font-size: 4.2rem;
   letter-spacing: 0.02em;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
 }
 
 .hero__name {
-  font-size: clamp(2.1rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 500;
 }
 .hero__name-cjk {
   font-weight: 400;
   color: var(--text-muted);
+  white-space: nowrap; /* keep 楊智翰 together; wrap before it instead */
 }
 
 .hero__role {
@@ -246,7 +285,7 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
   margin: 30px 0 0;
   padding: 0;
@@ -295,6 +334,11 @@ main {
 }
 
 /* ---------- Cards (research) ---------- */
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -306,6 +350,14 @@ main {
 .card:hover {
   box-shadow: var(--shadow-md);
   border-color: #d9d0c2;
+}
+.card__title a {
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+}
+.card__title a:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
 }
 .badge {
   display: inline-block;
@@ -330,6 +382,33 @@ main {
   font-size: 0.95rem;
 }
 .card__authors strong { color: var(--text); font-weight: 600; }
+.card__abstract {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.card--media {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.card--media .card__body { flex: 1 1 auto; min-width: 0; }
+.card__figure {
+  margin: 0;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+}
+.card__figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
 .card__links {
   margin: 16px 0 0;
   display: flex;
@@ -351,7 +430,7 @@ main {
 .list__item {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
@@ -371,9 +450,10 @@ main {
   border-bottom-color: var(--accent);
 }
 .list__meta {
-  flex: 0 0 auto;
-  color: var(--text-subtle);
+  flex: 0 0 130px;
+  color: var(--text);
   font-size: 0.85rem;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -391,6 +471,13 @@ main {
   font-size: 1.05rem;
   max-width: 60ch;
 }
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+.back-link:hover { color: var(--accent); }
 
 /* ---------- Summary cards (About → other pages) ---------- */
 .cards-grid {
@@ -507,10 +594,24 @@ main {
   .nav__links a.is-active::after { display: none; }
 
   .section { padding: 44px 0; }
-  .hero { padding: 48px 0 36px; }
   .page-header { padding: 48px 0 28px; }
 
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 26px;
+    padding: 48px 0 36px;
+  }
+  .hero__photo { width: 200px; height: 200px; }
+  .hero__monogram { font-size: 3rem; }
+  .hero__text { width: 100%; }
+  .hero__name { font-size: 1.7rem; }
+  .hero__links { justify-content: center; }
+
   .cards-grid { grid-template-columns: 1fr; }
+  .card--media { flex-direction: column; }
+  .card--media .card__figure { width: 100%; max-width: 220px; height: 220px; }
   .faith { grid-template-columns: 1fr; gap: 24px; }
 
   .list__item { flex-direction: column; gap: 4px; }
