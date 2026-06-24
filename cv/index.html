@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV · Chih Han Yang</title>
+  <meta name="description" content="Curriculum vitae of Chih Han Yang — education, research and industry experience, and technical skills." />
+  <meta name="author" content="Chih Han Yang" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CV · Chih Han Yang" />
+  <meta property="og:description" content="Education, research and industry experience, and technical skills." />
+  <meta property="og:url" content="https://chyang25.github.io/cv/" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">Chih Han Yang</a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/faith/">Faith</a>
+        <a href="/news/">News</a>
+        <a href="/cv/">CV</a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-header reveal">
+      <div class="page-header__row">
+        <h1 class="page-title">Curriculum Vitae</h1>
+        <a class="btn" href="/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      </div>
+      <!-- <p class="page-lead">Education, research and industry experience, and technical skills. For the full publication list, awards, talks, and other work, see the links at the bottom of this page.</p> -->
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section__title">Education</h2>
+      <ul class="list">
+        <li class="list__item">
+          <span class="list__meta">2026 – Present</span>
+          <span class="list__main"><strong>Ph.D., NTU Robot Learning Lab</strong> — National Taiwan University. Advisor: Prof. Shao-Hua Sun.</span>
+        </li>
+        <li class="list__item">
+          <span class="list__meta">2025 – 2026</span>
+          <span class="list__main"><strong>M.S., NTU Robot Learning Lab</strong> — National Taiwan University. Advisor: Prof. Shao-Hua Sun.</span>
+        </li>
+        <li class="list__item">
+          <span class="list__meta">2021 – 2025</span>
+          <span class="list__main"><strong>B.S., Computer Science and Information Engineering</strong> — National Taiwan University. Last 60 GPA: 4.073 / 4.3.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section__title">Research Experience</h2>
+      <div class="card-stack">
+        <article class="card">
+          <span class="badge">Sep 2024 – Present</span>
+          <h3 class="card__title">Graduate Researcher — NTU Robot Learning Lab</h3>
+          <ul class="card__list">
+            <li>Conducted research on programmatic reinforcement learning, investigating how program code can serve as a structured and generalizable representation for control policies.</li>
+            <li>Published our work, Hierarchical Programmatic Option Framework, at NeurIPS 2024.</li>
+            <li>Worked on imitation learning from suboptimal demonstrations, focusing on richer supervision signals beyond scalar rewards or weights.</li>
+            <li>Proposed using natural language as an expressive supervision signal for imitation learning in embodied control.</li>
+            <li>Explored diffusion steering through high-level noise prediction with in-context reinforcement learning.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="badge">Sep 2023 – Aug 2024</span>
+          <h3 class="card__title">Undergraduate Researcher — NTU Intelligent Robot Lab</h3>
+          <ul class="card__list">
+            <li>Worked on robot planning and decision-making with large language models.</li>
+            <li>Explored how semantic reasoning and program structure can improve embodied control and robot task execution.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section__title">Industry Experience</h2>
+      <div class="card-stack">
+        <article class="card">
+          <span class="badge">May 2026 – Present</span>
+          <h3 class="card__title">Robot Learning Research Intern — <a href="https://shennongshi.ai/en/" target="_blank" rel="noopener">Shen Nong Shih</a></h3>
+          <ul class="card__list">
+            <li>Work on AI robotics for making Chinese cuisine like a real human.</li>
+            <li>Develop and integrate real-time learning-based robotic systems for real-world culinary tasks.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="badge">Sep 2023 – Jun 2024</span>
+          <h3 class="card__title">Software Engineer — <a href="https://nturacing.tw/" target="_blank" rel="noopener">NTU Racing Team / Formula SAE</a></h3>
+          <ul class="card__list">
+            <li>Built software for race car communication, data uploading/decoding, and NTRIP/NMEA message publishing.</li>
+            <li>Worked on robotics and autonomous-system-related software in a team engineering environment.</li>
+          </ul>
+          <p class="card__links">
+            <a href="/projects/">Project details →</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section__title">Technical Skills</h2>
+      <div class="prose">
+        <p><strong>Programming:</strong> Python, C/C++, Bash</p>
+        <p><strong>Machine Learning:</strong> PyTorch, transformers, diffusion models, reinforcement learning, imitation learning</p>
+        <p><strong>Robotics / Simulation:</strong> Robot Operating System (ROS), MuJoCo, Gymnasium</p>
+        <p><strong>Tools:</strong> Git, Linux, Hydra, Weights & Biases</p>
+        <p><strong>Languages:</strong> Mandarin Chinese (native); English (fluent, TOEFL iBT 112)</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2 class="section__title">See Also</h2>
+      <div class="cards-grid">
+        <a class="summary-card" href="/research/">
+          <h3 class="summary-card__title">Research</h3>
+          <p class="summary-card__desc">Full publication list and awards, including the NeurIPS 2024 paper.</p>
+          <span class="summary-card__more">View research →</span>
+        </a>
+        <a class="summary-card" href="/projects/">
+          <h3 class="summary-card__title">Projects</h3>
+          <p class="summary-card__desc">NTU Racing Team / Formula SAE engineering work and NTU coursework.</p>
+          <span class="summary-card__more">View projects →</span>
+        </a>
+        <a class="summary-card" href="/news/">
+          <h3 class="summary-card__title">News</h3>
+          <p class="summary-card__desc">Talks and recent updates, including the Embodied AI Meeting at the University of Utah.</p>
+          <span class="summary-card__more">View news →</span>
+        </a>
+        <a class="summary-card" href="/faith/">
+          <h3 class="summary-card__title">Faith</h3>
+          <p class="summary-card__desc">Church life and Bible-study reflections.</p>
+          <span class="summary-card__more">View reflections →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__links">
+      <a href="mailto:chris920325@gmail.com">chris920325@gmail.com</a>
+      <span class="footer__dot">·</span>
+      <a href="https://github.com/CHYang25" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer__dot">·</span>
+      <a href="https://www.linkedin.com/in/chih-han-yang-68b895286/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer__dot">·</span>
+      <a href="https://scholar.google.com/citations?user=OcKSRrsAAAAJ&hl=zh-TW" target="_blank" rel="noopener">Google Scholar</a>
+      <span class="footer__dot">·</span>
+      <a href="https://x.com/ch_cyr_25" target="_blank" rel="noopener">X</a>
+      <span class="footer__dot">·</span>
+      <a href="https://www.instagram.com/ch_cyr_25/" target="_blank" rel="noopener">Instagram</a>
+    </p>
+    <p class="footer__copy">© <span id="year">2026</span> Chih Han Yang 楊智翰</p>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
